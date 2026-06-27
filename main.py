@@ -224,7 +224,7 @@ def send_messages():
     
     generator = CardGenerator()
     total_cards = 10000000
-    cards_per_batch = 10  # Send 10 cards per message
+    cards_per_batch = 1  # Send 10 cards per message
     max_workers = 8  # Parallel threads
     
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
