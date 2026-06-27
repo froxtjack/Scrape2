@@ -169,13 +169,12 @@ class CardGenerator:
         
         return message
     
-    buttons = [
-        [Button.inline("𝙊𝙒𝙉𝙀𝙍", "url": "https://t.me/Atul_FROXT_73", style="primary", icon=6001198270435563383),Button.inline("𝘾𝙃𝘼𝙉𝙉𝙀𝙇", "url": "https://t.me/+gS3I7lo7i98zZjc1", style="primary", icon=5260681660189408650)]
-    ]
-    try:
-        await event.edit(msg, buttons=buttons, parse_mode='html', link_preview=False)
-    except Exception:
-        pass
+    reply_markup = {
+        "inline_keyboard": [[
+            {"text": "𝙊𝙒𝙉𝙀𝙍", "url": "https://t.me/Atul_FROXT_73"},
+            {"text": "𝘾𝙃𝘼𝙉𝙉𝙀𝙇", "url": "https://t.me/+gS3I7lo7i98zZjc1"}
+        ]]
+}
     
     try:
         data = {
